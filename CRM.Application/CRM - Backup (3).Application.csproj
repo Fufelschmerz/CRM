@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ContactPersons\Actions\AddContact\**" />
+    <EmbeddedResource Remove="Controllers\ContactPersons\Actions\AddContact\**" />
+    <None Remove="Controllers\ContactPersons\Actions\AddContact\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="FluentValidation" Version="10.3.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.2" />
+    <PackageReference Include="Tados.Autofac.Extensions.ConfiguredModules" Version="1.0.0" />
+    <PackageReference Include="Tados.Autofac.Extensions.TypedFactories" Version="1.0.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiControllers\ApiControllers.csproj" />
+    <ProjectReference Include="..\Api\Api.csproj" />
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\CRM.Persistense\CRM.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\ContactPersons\Actions\Archive\Delete\" />
+    <Folder Include="Controllers\Contacts\Actions\Get\" />
+    <Folder Include="Controllers\Contacts\Profile\" />
+    <Folder Include="Controllers\Customers\Actions\Archive\Add\" />
+    <Folder Include="Controllers\Customers\Actions\Archive\Delete\" />
+    <Folder Include="Controllers\Customers\Actions\Edit\" />
+    <Folder Include="Controllers\Customers\Actions\Get\" />
+    <Folder Include="Controllers\Customers\Actions\Delete\" />
+    <Folder Include="Controllers\Customers\Profiles\" />
+    <Folder Include="Controllers\Files\Customers\Dto\" />
+    <Folder Include="Controllers\Files\Customers\Profile\" />
+    <Folder Include="Infrastructure\Exceptions\Customers\" />
+    <Folder Include="Infrastructure\Queries\Entities\" />
+  </ItemGroup>
+
+</Project>
